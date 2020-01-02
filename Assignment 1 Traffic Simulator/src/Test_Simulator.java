@@ -1,6 +1,28 @@
+import javax.swing.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
 class Test_Simulator {
 
     public static void main(String[] args) throws InterruptedException,NullPointerException {
+        JFrame mainFrame = new JFrame("Traffic Simulator");
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Frame frame = new Frame();
+        mainFrame.add(frame);
+        System.out.println(frame.getModeList().getSelectedItem().toString());
+        frame.getModeList().addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent itemEvent) {
+                if (itemEvent.getItem().toString().equalsIgnoreCase("City Editing")){
+                    frame.FrameSimulation();
+                }
+                else {
+                    frame.FrameEdit();
+                }
+            }
+        });
+        mainFrame.pack();
+        mainFrame.setVisible(true);
 
         Car vehicle;
         Boolean finish=false;
