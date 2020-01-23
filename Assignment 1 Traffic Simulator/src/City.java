@@ -22,3 +22,9 @@ public class City extends JPanel {
         setVisible(true);
     }
 
+    /**Add the traffic light method**/
+    public void addSignal(Signal signal) {
+        trafficLights.add(signal);
+
+    }
+
