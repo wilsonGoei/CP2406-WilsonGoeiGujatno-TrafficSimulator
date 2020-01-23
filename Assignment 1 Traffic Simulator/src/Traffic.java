@@ -1,6 +1,15 @@
+import javafx.scene.media.MediaPlayer;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import javafx.scene.media.Media;
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -8,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 
 public class Traffic extends JFrame implements Runnable,ActionListener {
 	private Vehicle vehicles[]=new Vehicle[30];  //Create array that will contain the vehicle
@@ -596,18 +606,31 @@ public class Traffic extends JFrame implements Runnable,ActionListener {
 		}
 	}
 
+	/**Method to Play Music**/
+	public static void playMusic(){
+		try{
+			FileInputStream fileInput = new FileInputStream("bgMusic.mp3"); // open music
+			Player player = new Player(fileInput); // add Player
+			player.play(); // play the song
+		} catch (FileNotFoundException e){
+			e.printStackTrace();
+		} catch (JavaLayerException e){
+			e.printStackTrace();
+		}
+	}
 	/**Main that calls other classes**/
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Traffic frame = new Traffic();
-					frame.setVisible(true);
+					Traffic frame = new Traffic(); // run the frame
+					frame.setVisible(true); // set the frame to visible
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
+		playMusic(); // play music
 	}
 	
 }

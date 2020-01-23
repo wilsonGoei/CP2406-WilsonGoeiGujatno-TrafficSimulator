@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0e3b180-9df3-4f92-8bdc-48ff1f8e83a4" name="Default Changelist" comment="" />
+    <list default="true" id="33ec52e7-6898-462e-9155-50fc732ae48d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/basicplayer3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_logging_api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrafficFinal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TrafficFinal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Traffic$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Traffic$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Traffic$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Traffic$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Traffic$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Traffic$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Traffic$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Traffic$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Traffic$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Traffic$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Traffic$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Traffic$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Traffic$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Traffic$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Traffic.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Traffic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traffic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traffic.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +26,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1WmBXFOAx4Af5f7l0Tiwdt1nhf0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Assignment 2/CP2406-WilsonGoeiGujatno-TrafficSimulator/Assignment 1 Traffic Simulator" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../BasicPlayer3.0/lib/vorbisspi1.0.2.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -40,53 +60,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="TrafficFinal" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="TrafficFinal" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Traffic" />
@@ -98,12 +71,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d0e3b180-9df3-4f92-8bdc-48ff1f8e83a4" name="Default Changelist" comment="" />
+      <changelist id="33ec52e7-6898-462e-9155-50fc732ae48d" name="Default Changelist" comment="" />
       <created>1579744927571</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579744927571</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
