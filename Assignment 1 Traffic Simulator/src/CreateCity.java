@@ -29,3 +29,7 @@ public class CreateCity extends JPanel {
         this.roads = roads; // number of roads
     }
 
+    /**Add Vehicle Method**/
+    public void addVehicle(Vehicle vehicle) {
+        vehicles.add(vehicle); // Add vehicle to array list
+    }
