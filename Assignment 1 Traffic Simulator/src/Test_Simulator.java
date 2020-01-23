@@ -9,7 +9,6 @@ class Test_Simulator {
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Frame frame = new Frame();
         mainFrame.add(frame);
-        System.out.println(frame.getModeList().getSelectedItem().toString());
         frame.getModeList().addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent itemEvent) {

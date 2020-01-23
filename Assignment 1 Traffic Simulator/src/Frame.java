@@ -111,8 +111,6 @@ public class Frame extends JPanel {
         innerPanelBottom.add(gridBagLayout,BorderLayout.WEST);
         add(innerPanelBottom,BorderLayout.PAGE_END);
 
-
-
     }
 
     public void FrameEdit(){
