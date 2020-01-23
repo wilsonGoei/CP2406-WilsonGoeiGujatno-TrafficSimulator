@@ -510,3 +510,72 @@ public class Traffic extends JFrame implements Runnable,ActionListener {
         }
     }
 
+    /**Control the condition of the simulator**/
+    public void run() {
+        while(simulationRunning ==true & open==false) {
+            city.step();
+            city.repaint();
+            check();
+            vehicleNumLabel.setText(String.valueOf(total));
+            if(counter ==10 & total!=29) {
+                addVehicle(-10,0);
+                counter =0;
+
+            }
+
+            counter++;
+
+            int sleepNumber = 500; // default number for thread sleep
+            if (updateRateNum == 1){ // if the input is 1
+                sleepNumber = 500; // set default number for thread sleep
+                updateRateNumStat.setText(String.valueOf(updateRateNum)); // change the rate number status label
+            }
+            else if (updateRateNum == 2){ // if the input is 2
+                sleepNumber = 400; // default number for thread sleep
+                updateRateNumStat.setText(String.valueOf(updateRateNum)); // change the rate number status label
+            }
+            else if (updateRateNum == 3){ // if the input is 3
+                sleepNumber = 300; // default number for thread sleep
+                updateRateNumStat.setText(String.valueOf(updateRateNum)); // change the rate number status label
+            }
+            else if (updateRateNum == 4){ // if the input is 4
+                sleepNumber = 200; // default number for thread sleep
+                updateRateNumStat.setText(String.valueOf(updateRateNum)); // change the rate number status label
+            }
+            else if (updateRateNum == 5){ // if the input is 5
+                sleepNumber = 100; // default number for thread sleep
+                updateRateNumStat.setText(String.valueOf(updateRateNum)); // change the rate number status label
+            }
+
+            try {
+                Thread.sleep(sleepNumber);
+            }
+            catch(Exception exception) {
+                exception.printStackTrace();
+            }
+        }
+
+        while(simulationRunning ==true & open==true) {
+
+            createdCities[anotherIndex].step();
+            createdCities[anotherIndex].repaint();
+            check();
+            vehicleNumLabel.setText(String.valueOf(total));
+            if(counter ==10 & total!=29) {
+                addVehicle(indexNumber, anotherIndex);
+                counter =0;
+
+            }
+
+            counter++;
+
+
+            try {
+                Thread.sleep(500);
+            }
+            catch(Exception e) {
+                e.printStackTrace();
+            }}
+    }
+
+
