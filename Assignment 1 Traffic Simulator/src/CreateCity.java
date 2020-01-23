@@ -33,3 +33,15 @@ public class CreateCity extends JPanel {
     public void addVehicle(Vehicle vehicle) {
         vehicles.add(vehicle); // Add vehicle to array list
     }
+
+    /**Add Traffic lights Method**/
+    public void addSignal(Signal signal) {
+        trafficLights.add(signal); // add traffic light to array list
+
+    }
+
+    /**Set the Traffic Light status**/
+    public void setSignal(int i,boolean r,boolean y,boolean g) {
+        trafficLights.get(i).setSignal(r, y, g);
+    }
+
