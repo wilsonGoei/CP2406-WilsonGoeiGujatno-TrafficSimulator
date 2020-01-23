@@ -332,3 +332,50 @@ public class Traffic extends JFrame implements Runnable,ActionListener {
         }
     }
 
+    /**Control the position of the traffic lights**/
+    public void addSignal(int index,int i) {
+        if(index>0 & index<=2) {
+        }
+        else if(index>2 & index<=4) {
+            createdCities[i].addSignal(new Signal(true,false,false,310, 117,true)); // add traffic light to a particular city
+            createdCities[i].addSignal(new Signal(true,false,false,372, 60,false)); // add traffic light to a particular city
+            createdCities[i].addSignal(new Signal(true,false,false,372, 150,false)); // add traffic light to a particular city
+            createdCities[i].addSignal(new Signal(true,false,false,395, 117,true)); // add traffic light to a particular city
+        }
+        else if(index>4 & index<=6) {
+            createdCities[i].addSignal(new Signal(true,false,false,310, 117,true)); // add traffic light to a particular city
+            createdCities[i].addSignal(new Signal(true,false,false,372, 60,false)); // add traffic light to a particular city
+            createdCities[i].addSignal(new Signal(true,false,false,372, 150,false)); // add traffic light to a particular city
+            createdCities[i].addSignal(new Signal(true,false,false,395, 117,true)); // add traffic light to a particular city
+            createdCities[i].addSignal(new Signal(true,false,false,372, 445,false)); // add traffic light to a particular city
+        }
+        else if(index>6 &  index<=8) {
+            signal =new Signal(true,false,false,310, 117,true);
+            createdCities[i].addSignal(signal); // add traffic light to a particular city
+            signal =new Signal(true,false,false,372, 60,false);
+            createdCities[i].addSignal(signal); // add traffic light to a particular city
+
+            signal =new Signal(true,false,false,372, 150,false);
+            createdCities[i].addSignal(signal); // add traffic light to a particular city
+            signal =new Signal(true,false,false,395, 117,true);
+            createdCities[i].addSignal(signal); // add traffic light to a particular city
+
+            signal =new Signal(true,false,false,170, 445,false);
+            createdCities[i].addSignal(signal); // add traffic light to a particular city
+            signal =new Signal(true,false,false,372, 445,false);
+            createdCities[i].addSignal(signal); // add traffic light to a particular city
+            signal =new Signal(true,false,false,672, 445,false);
+            createdCities[i].addSignal(signal); // add traffic light to a particular city
+        }
+        else {
+            city.addSignal(new Signal(true,false,false,310, 117,true)); // add traffic light to a particular city
+            city.addSignal(new Signal(true,false,false,372, 60,false)); // add traffic light to a particular city
+
+            city.addSignal(new Signal(true,false,false,372, 150,false)); // add traffic light to a particular city
+            city.addSignal(new Signal(true,false,false,395, 117,true)); // add traffic light to a particular city
+
+            city.addSignal(new Signal(true,false,false,170, 445,false)); // add traffic light to a particular city
+            city.addSignal(new Signal(true,false,false,372, 445,false)); // add traffic light to a particular city
+            city.addSignal(new Signal(true,false,false,672, 445,false));} // add traffic light to a particular city
+    }
+
