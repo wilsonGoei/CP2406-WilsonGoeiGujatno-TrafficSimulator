@@ -283,3 +283,59 @@ public class Vehicle {
             this.num3++;}
     }
 
+    /**The display when Vehicle turn**/
+    public void turn() {
+        int turned = this.vehicle_width;
+        this.vehicle_width =this.vehicle_height;
+        this.vehicle_height = turned;
+    }
+
+    /**First Turn Situation**/
+    public void turn1() {
+        if(this.turn1==false) {
+            int turned2 = 0;
+            turned2 = this.vehicle_height;
+            this.vehicle_height =this.vehicle_width;
+            this.vehicle_width =turned2;
+            this.turn1=true;
+
+        }
+        else {
+            int turned3 = 0;
+            turned3 = this.vehicle_height;
+            this.vehicle_height =this.vehicle_width;
+            this.vehicle_width =turned3;
+            this.turn1=false;
+        }
+    }
+
+    /**Second Turn Situation**/
+    public void turn2() {
+        if(this.turn2==false) {
+            int turned_4 = 0;
+            turned_4 = this.vehicle_height;
+            this.vehicle_height =this.vehicle_width;
+            this.vehicle_width =turned_4;
+            this.turn2=true;
+
+        }
+        else {
+            int turned5=0;
+            turned5=this.vehicle_height;
+            this.vehicle_height =this.vehicle_width;
+            this.vehicle_width =turned5;
+            this.turn2=false;
+        }
+    }
+
+    /**Third Turn Situation**/
+    public void turn3() {
+        if(this.turn3==false) {
+            this.turn3=true;
+
+        }
+        else {
+            this.turn3=false;
+        }
+    }
+}
