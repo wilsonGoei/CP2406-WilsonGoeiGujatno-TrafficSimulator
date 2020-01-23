@@ -76,3 +76,64 @@ public class Vehicle {
         }
 
     }
+
+    /**Display**/
+    public void paintMe(Graphics graphics) {
+
+    }
+
+    /**Set the vehicle position**/
+    public void setVehicle_position(int p) {
+        this.vehicle_position = p;
+    }
+
+    /**Get the X position**/
+    public int getX_axis() {
+        return x_axis;
+    }
+
+    /**Set the X position**/
+    public void setX_axis(int x_axis) {
+        this.x_axis = x_axis;
+    }
+
+    /**Get the Y position**/
+    public int getY_axis() {
+        return y_axis;
+    }
+
+    /**Set the Y position**/
+    public void setY_axis(int y_axis) {
+        this.y_axis = y_axis;
+    }
+
+    /**Get the Vehicle Speed**/
+    public int getVehicle_speed() {
+        return vehicle_speed;
+    }
+
+    /**Set the Vehicle Speed**/
+    public void setVehicle_speed(int vehicle_speed) {
+        this.vehicle_speed = vehicle_speed;
+    }
+
+    /**Get the Vehicle Width**/
+    public int getVehicle_width() {
+        return vehicle_width;
+    }
+
+    /**Set the Vehicle Width**/
+    public void setVehicle_width(int vehicle_width) {
+        this.vehicle_width = vehicle_width;
+    }
+
+    /**Get the Vehicle Height**/
+    public int getVehicle_height() {
+        return vehicle_height;
+    }
+
+    /**Set the Vehicle Height**/
+    public void setVehicle_height(int vehicle_height) {
+        this.vehicle_height = vehicle_height;
+    }
+

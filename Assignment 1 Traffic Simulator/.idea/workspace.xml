@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ec52e7-6898-462e-9155-50fc732ae48d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/CP2406-WilsonGoeiGujatno-TrafficSimulator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assign1/Frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assign1/Frame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assign1/Test_Simulator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assign1/Test_Simulator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assign1/Test_Simulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assign1/Test_Simulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test_Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test_Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vehicle.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
