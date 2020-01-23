@@ -141,3 +141,179 @@ public class Traffic extends JFrame implements Runnable,ActionListener {
         updateRateNumStat.setBounds(160, 534, 67, 23); // set the container position and size
         contentPanel.add(updateRateNumStat); // add the label to the menu panel
 
+        /**Action listener for Simulator button**/
+        buttonNewButtonSim.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+
+                buttonRun.setVisible(true); // make run button visible
+                buttonStop.setVisible(true); // make stop button visible
+                setUpdateRate.setVisible(true); // make set update rate button to visible
+
+                buttonOpen.setVisible(false); // make open button invisible
+                buttonEdit.setVisible(false); // make edit button invisible
+                buttonNewButton_2.setVisible(false); // make create button invisible
+                labelMode.setText("MODE: SIMULATOR"); // make the model label to simulator
+                labelCityDefault.setVisible(true); // make default mode label to visible
+                labelVehicles.setVisible(true); // make label visible
+                vehicleNumLabel.setVisible(true); // make label visible
+                city.setVisible(true); // make label visible
+
+            }
+        });
+
+        /**Action listener for Edit City button**/
+        buttonButtonEditCity.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+
+                buttonRun.setVisible(false); // make button invisible
+                buttonStop.setVisible(false); // make button invisible
+                setUpdateRate.setVisible(false); // make button invisible
+
+                buttonOpen.setVisible(true); // make button visible
+                buttonEdit.setVisible(true); // make button visible
+                buttonNewButton_2.setVisible(true); // make button visible
+                labelStatus.setVisible(false); // make label invisible
+                labelMode.setText("MODE: CITY EDIT"); // make the mode label to city edit
+                labelCityDefault.setVisible(false); // make label invisible
+                labelVehicles.setVisible(false); // make label invisible
+                vehicleNumLabel.setVisible(false); // make label invisible
+            }
+        });
+
+        /**Action listener for Set Update Rate Button**/
+        setUpdateRate.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JOptionPane optionPane = new JOptionPane(); // make option pane
+                String updateRateNumInput = optionPane.showInputDialog("Enter the number of update rate:(1-5)"); // set update rate input
+                updateRateNum = Integer.parseInt(updateRateNumInput); // change the input to Integer
+                if (updateRateNum < 0 || updateRateNum > 5){
+                    optionPane.showMessageDialog(null,"Invalid Input","Error",JOptionPane.ERROR_MESSAGE); // error message
+                    updateRateNum = 1; // set the update rate number to 1
+                }
+                updateRateNumStat.setText(updateRateNumInput); // change the update rate status label
+            }
+        });
+
+        /**Action listener for create button**/
+        buttonNewButton_2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                if(cityNum <5) {
+                    city.setVisible(true); // make label visible
+                    buttonOpen.setVisible(false); // make button invisible
+                    buttonEdit.setVisible(false); // make button invisible
+                    buttonNewButton_2.setVisible(false); // make button invisible
+                    JOptionPane optionPane=new JOptionPane(); // make option pane
+                    String name=optionPane.showInputDialog("Enter city name"); // city name input
+                    int roads=Integer.parseInt(optionPane.showInputDialog("Enter no of Roads ")); // roads number input
+
+                    buttonRun.setVisible(false); // make button invisible
+                    buttonStop.setVisible(false); // make button invisible
+
+                    buttonOpen.setVisible(true); // make button visible
+                    buttonEdit.setVisible(true); // make button visible
+                    buttonNewButton_2.setVisible(true); // make button visible
+                    labelStatus.setVisible(false); // make button invisible
+                    labelMode.setText("MODE: CITY EDIT"); // change the mode label to city edit
+                    labelCityDefault.setVisible(false); // make label invisible
+                    labelVehicles.setVisible(false); // make label invisible
+                    vehicleNumLabel.setVisible(false); // make label invisible
+                    CreateCity create=new CreateCity(name,roads); //put the parameter to create city class
+                    createdCities[cityNum]=create; // put it to the list
+                    optionPane.showMessageDialog(contentPanel, "You have succesfully created "+name+".");
+                    city.setVisible(false); // make label invisible
+                    contentPanel.add(createdCities[cityNum]);
+                    for(int i = 0; i< cityNum; i++) {
+                        createdCities[i].setVisible(false);
+                    }
+                    addSignal(createdCities[cityNum].roads, cityNum);
+                    createdCities[cityNum].setVisible(true);
+                    cityNum++;
+
+                }
+                else {
+                    JOptionPane.showMessageDialog(contentPanel, "You can't create cities more than 5");
+                }
+
+
+            }
+        });
+
+        /**Action listener for edit button**/
+        buttonEdit.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonOpen.setVisible(false); // make button invisible
+                buttonEdit.setVisible(false); // make button invisible
+                buttonRun.setVisible(false); // make button invisible
+                buttonStop.setVisible(false); // make button invisible
+                buttonNewButton_2.setVisible(false); // make button invisible
+                JOptionPane jOptionPane=new JOptionPane();
+                if(cityNum !=0) {
+                    String name=jOptionPane.showInputDialog("Enter city name"); // enter city name that what to be opened
+                    int i=0;
+                    while(i!= cityNum) {
+                        if(createdCities[i].name.equalsIgnoreCase(name)) {
+                            int roads=Integer.parseInt(jOptionPane.showInputDialog("Enter no of Roads "));
+                            createdCities[i].roads=roads;
+                            JOptionPane.showMessageDialog(contentPanel, createdCities[i].name+" Edited succesfully!");
+                            for(int m = 0; m< cityNum; m++) {
+                                createdCities[m].setVisible(false);
+                            }
+                            createdCities[i].trafficLights.clear();
+                            addSignal(roads,i);
+                            createdCities[i].setVisible(true);
+                        }
+                        i++;
+                    }
+
+                }
+                else {
+                    JOptionPane.showMessageDialog(contentPanel, "No Cities Found!"); // if the city not found
+
+                }
+                buttonOpen.setVisible(true); // make button visible
+                buttonEdit.setVisible(true); // make button visible
+                buttonNewButton_2.setVisible(true); // make button visible
+            }
+
+        });
+
+        /**Action listener for open button**/
+        buttonOpen.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(cityNum >0) {
+                    String name=JOptionPane.showInputDialog("Enter city name"); // prompt to get the city name
+                    for(int i = 0; i< cityNum; i++) {
+
+                        if(createdCities[i].name.equalsIgnoreCase(name)) { // if the city name is same with the stored city
+
+                            open=true; // open the city
+                            indexNumber = createdCities[i].roads;
+                            i=i;
+                            createdCities[i].setVisible(true); // make the opened city visible
+                            buttonRun.setVisible(true); // make the run button visible
+                            buttonStop.setVisible(true); // make the stop button invisible
+                            setUpdateRate.setVisible(true); // make the set update rate visible
+
+                            buttonOpen.setVisible(false); // make the open button invisible
+                            buttonEdit.setVisible(false); // make the edit button invisible
+                            buttonNewButton_2.setVisible(false); // make the create button invisible
+                            labelMode.setText("MODE: SIMULATOR"); // change the mode to simulator
+                            labelCityDefault.setText("City:"+ createdCities[i].name); // change the city label name
+                            labelCityDefault.setVisible(true); // set the label to visible
+                            labelVehicles.setVisible(true); // set the vehicle label to visible
+                            vehicleNumLabel.setVisible(true); // set the vehicle number label to visible
+                            total=0; // set the total to 0
+
+                        }
+                    }
+
+                }
+                else {
+                    JOptionPane.showMessageDialog(contentPanel, "No Cities Found!"); // if there is no city name input same with the stored city
+                }
+            }
+        });
+
+    }
+
