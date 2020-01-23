@@ -137,3 +137,149 @@ public class Vehicle {
         this.vehicle_height = vehicle_height;
     }
 
+    /**Set the road position**/
+    public void setRoad(int x,int y) {
+        if(x >= -40 & x <= 305 & y == 104 || y == 135 & x >= 0 & x <= 310) {
+            this.road = "r1";
+            this.signal = "s1";
+            this.current = false;
+            this.previous = this.road;
+            if(x <- 20) {
+                check = true;
+            }
+
+        }
+        else if(y >= 0 & y <= 55 & x == 354 || x == 385 & y >- 30 & y <= 60) {
+            this.road = "r2";
+            this.signal = "s2";
+            this.current = false;
+            this.previous = this.road;
+            if(y<-20) {
+                check = true;
+            }
+
+        }
+        else if(y <= 370 & y >= 165 & x == 385 ||x == 354 & y <= 355 & y >= 150) {
+            this.road = "r3";
+            this.signal = "s3";
+            this.current = false;
+            this.previous = this.road;
+        }
+        else if(x >= 409 & x <= 820 & y == 135 || x >= 390 & x <= 890 & y == 104) {
+            this.road = "r4";
+            this.signal = "s4";
+            this.current = false;
+            this.previous = this.road;
+            if(x > 870) {
+                check = true;
+            }
+
+        }
+        else if(y <= 560 & y >= 465 & x == 185 || x == 155 & y <= 560 & y >= 445) {
+            this.road = "r5";
+            this.signal = "s5";
+            this.current = false;
+            this.previous = this.road;
+        }
+        else if(y <= 560 & y >= 465 & x == 385 || y <= 560 & y >= 445 & x == 355 ) {
+            this.road = "r6";
+            this.signal = "s6";
+            this.current = false;
+            this.previous = this.road;
+        }
+        else if(y <= 560 & y >= 465 & x == 685 || y <= 560 & y >= 445 & x == 655) {
+            this.road = "r7";
+            this.signal = "s7";
+            this.current = false;
+            this.previous = this.road;
+        }
+        else if(x >= 0 & x <= 820 & y == 404 || x >= 0 & x <= 850 & y == 432 ) {
+            this.road = "main";
+            this.previous = this.road;
+            this.signal = "main";
+            if(this.x_axis > 780) {
+                this.check = true;
+            }
+        }
+        else {
+
+            this.road = "in";
+            if(this.num3 >=3) {
+                this.current = true;
+                if(this.num >=3) {
+                    if(this.previous.equals("r1")) {
+                        this.y_axis =59;
+                        this.x_axis =385;
+                        turn2();
+                        this.turn1=false;
+                        this.turn3=false;
+                        this.road="r2";
+                        this.previous=this.road;
+                        num =0;
+
+
+                    }
+                    else if(this.previous.equals("r2")) {
+                        if(num ==3 & num1 ==0) {
+                            this.turn2=false;
+                            this.turn1=false;
+                            this.turn3=false;
+                            this.road="in";
+                            turn();
+                            num =0;
+
+                        }
+                        if(num1 ==1) {
+                            this.y_axis =104;
+                            this.x_axis =392;
+                            this.road="r4";
+                            num1 =0;
+                            this.previous=this.road;
+
+                        }
+                        num1++;
+
+                    }
+                    else if(this.road.equals("r3")) {
+
+                    }
+                    else if(this.road.equals("r4")) {
+                    }
+                    else if(this.previous.equals("r5")) {
+
+                        this.y_axis =404;
+                        this.x_axis =190;
+                        this.turn2=false;
+                        this.turn1=false;
+                        this.turn3=false;
+                        this.road="main";
+                        num =0;
+                        turn();
+                    }
+                    else if(this.previous.equals("r6")) {
+                        this.y_axis =404;
+                        this.x_axis =390;
+                        this.turn2=false;
+                        this.turn1=false;
+                        this.turn3=false;
+                        this.road="main";
+                        num =0;
+                        turn();
+                    }
+                    else if(this.previous.equals("r7")) {
+                        this.y_axis =404;
+                        this.x_axis =690;
+                        this.turn2=false;
+                        this.turn1=false;
+                        this.turn3=false;
+                        this.road="main";
+                        num =0;
+                        turn();
+
+                    }
+                }
+                num++;
+            }
+            this.num3++;}
+    }
+
