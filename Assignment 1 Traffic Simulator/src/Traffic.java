@@ -379,3 +379,134 @@ public class Traffic extends JFrame implements Runnable,ActionListener {
             city.addSignal(new Signal(true,false,false,672, 445,false));} // add traffic light to a particular city
     }
 
+    /**Control the spawn and the position of the vehicles**/
+    public void addVehicle(int index,int i) {
+        if(index>0 & index<=2) {
+            vehicles[total]=new Bus(804, 135);
+            vehicles[total].turn3();
+            createdCities[i].addVehicle(vehicles[total]);
+            total++;
+        }
+        else if(index>2 & index<=4) {
+            int a=(int) (Math.random() * 3);
+            if(a==0) {
+                vehicles[total]=new Bus(804, 135);
+                vehicles[total].turn3();
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+
+            else if(a==1) {
+                vehicles[total]=new Car(354, 0);
+                vehicles[total].turn1();
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+        }
+        else if(index>4 & index<=6) {
+            int a=(int) (Math.random() * 5);
+            if(a==0) {
+                vehicles[total]=new Bus(804, 135);
+                vehicles[total].turn3();
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+
+            else if(a==1) {
+                vehicles[total]=new Car(354, 0);
+                vehicles[total].turn1();
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+
+            else if(a==2) {
+                vehicles[total]=new Bike(385, 580);
+                vehicles[total].turn2();
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+            else if(a==3) {
+
+                vehicles[total]=new Car(0, 404);
+
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+        }
+        else if(index>6 &  index<=8) {
+            int a=(int) (Math.random() * 5);
+            if(a==0) {
+                vehicles[total]=new Bus(804, 135);
+                vehicles[total].turn3();
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+
+            else if(a==1) {
+                vehicles[total]=new Car(354, 0);
+                vehicles[total].turn1();
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+
+            else if(a==2) {
+                vehicles[total]=new Bike(385, 580);
+                vehicles[total].turn2();
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+            else if(a==3) {
+
+                vehicles[total]=new Car(0, 404);
+
+                createdCities[i].addVehicle(vehicles[total]);
+                total++;}
+            else if(a==4) {
+                vehicles[total]=new Bike(185, 580);
+                vehicles[total].turn2();
+                city.addVehicle(vehicles[total]);
+                total++;}
+            else if(a==5) {
+
+                vehicles[total]=new Bike(685, 580);
+                vehicles[total].turn2();
+                city.addVehicle(vehicles[total]);
+                total++;}
+        }
+
+
+        else {
+            int a=(int) (Math.random() * 5);
+            if(a==0) {
+
+                vehicles[total]=new Bike(185, 580);
+                vehicles[total].turn2();
+                city.addVehicle(vehicles[total]);
+                total++;}
+
+            else if(a==1) {
+                vehicles[total]=new Car(385, 580);
+                vehicles[total].turn2();
+                city.addVehicle(vehicles[total]);
+                total++;}
+
+            else if(a==2) {
+                vehicles[total]=new Bike(685, 580);
+                vehicles[total].turn2();
+                city.addVehicle(vehicles[total]);
+                total++;}
+            else if(a==3) {
+
+                vehicles[total]=new Car(354, 0);
+                vehicles[total].turn1();
+                city.addVehicle(vehicles[total]);
+                total++;}
+
+            else if(a==4) {
+
+                vehicles[total]=new Bus(810, 135);
+                vehicles[total].turn3=true;
+                city.addVehicle(vehicles[total]);
+
+                total++;}
+
+            else {
+
+                vehicles[total]=new Bus(0, 404);
+                city.addVehicle(vehicles[total]);
+                total++;	}
+
+        }
+    }
+
