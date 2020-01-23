@@ -114,3 +114,92 @@ public class City extends JPanel {
 
     }
 
+    /**Control the steps of the simulator**/
+    public void step() {
+        for(int i = 0; i< vehicles.size(); i++) {
+            Vehicle vehicle= vehicles.get(i);
+
+
+            if(vehicle.turn1==true & !vehicle.road.equals("in") ) {
+                vehicle.setY_axis(vehicle.getY_axis()+vehicle.getVehicle_speed() );
+                vehicle.setVehicle_position(vehicle.getY_axis()+vehicle.getVehicle_speed());
+                vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+
+
+
+            }
+            else if(vehicle.turn2==true & !vehicle.road.equals("in")){
+                vehicle.setY_axis(vehicle.getY_axis()-vehicle.getVehicle_speed());
+                vehicle.setVehicle_position(vehicle.getY_axis()-vehicle.getVehicle_speed());
+                vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+
+
+            }
+            else if(vehicle.turn3==true & !vehicle.road.equals("in")){
+                vehicle.setX_axis(vehicle.getX_axis()-vehicle.getVehicle_speed());
+                vehicle.setVehicle_position(vehicle.getX_axis()-vehicle.getVehicle_speed());
+                vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+
+
+            }
+            else if(vehicle.turn3==false & vehicle.turn3==false & vehicle.turn3==false & !vehicle.road.equals("in")) {
+                vehicle.setX_axis(vehicle.getX_axis()+vehicle.getVehicle_speed());
+                vehicle.setVehicle_position(vehicle.getX_axis()+vehicle.getVehicle_speed());
+                vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+
+
+            }
+            else {
+                if(vehicle.current==true) {
+
+                    int count=0;
+                    if(vehicle.signal.equals("s1")) {count=0;}
+                    else if(vehicle.signal.equals("s2")) {count=1;}
+                    else if(vehicle.signal.equals("s3")) {count=2;}
+                    else if(vehicle.signal.equals("s4")) {count=3;}
+                    else if(vehicle.signal.equals("s5")) {count=4;}
+                    else if(vehicle.signal.equals("s6")) {count=5;}
+                    else if(vehicle.signal.equals("s7")) {count=6;}
+                    else if(vehicle.signal.equals("s8")) {count=7;}
+
+                    if(count==0) {
+                        trafficLights.get(count).setSignal(false, false, true);
+
+                    }
+                    else {
+                        trafficLights.get(count-1).setSignal(true, false, false);
+                        trafficLights.get(count).setSignal(false, false, true);
+                    }
+                    if(vehicle.turn1==true) {
+                        vehicle.setY_axis(vehicle.getY_axis()+vehicle.getVehicle_speed() );
+                        vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+                    }
+                    else if(vehicle.turn2==true){
+                        vehicle.setY_axis(vehicle.getY_axis()-vehicle.getVehicle_speed());
+
+                        vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+
+
+                    }
+                    else if(vehicle.turn3==true ){
+                        vehicle.setX_axis(vehicle.getX_axis()-vehicle.getVehicle_speed());
+                        vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+
+
+                    }
+                    else if(vehicle.turn3==false & vehicle.turn3==false & vehicle.turn3==false ) {
+                        vehicle.setX_axis(vehicle.getX_axis()+vehicle.getVehicle_speed());
+                        vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+
+
+                    }
+                }
+                else {
+                    vehicle.setRoad(vehicle.getX_axis(), vehicle.getY_axis());
+                }
+
+            }
+        }
+    }
+
+}
