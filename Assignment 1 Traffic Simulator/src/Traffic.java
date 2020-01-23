@@ -579,3 +579,35 @@ public class Traffic extends JFrame implements Runnable,ActionListener {
     }
 
 
+    @Override
+    public void actionPerformed(ActionEvent event) {
+        if(event.getSource().equals(buttonRun)) {
+
+            if(simulationRunning ==false) {
+                simulationRunning =true;
+                Thread t=new Thread(this);
+                t.start();
+
+
+            }
+        }
+        if(event.getSource().equals(buttonStop)) {
+            simulationRunning = false;
+        }
+    }
+
+    /**Main that calls other classes**/
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    Traffic frame = new Traffic();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+}
