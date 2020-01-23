@@ -19,3 +19,10 @@ public class Signal {
         this.turn = turn;
     }
 
+    /**Set the status of the traffic lights**/
+    public void setSignal(boolean red_input, boolean yellow_input, boolean green_input) {
+        this.red = red_input; // set the red light
+        this.yellow = yellow_input; // set the yellow light
+        this.green = green_input; // set the green light
+    }
+
