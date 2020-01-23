@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ec52e7-6898-462e-9155-50fc732ae48d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pavement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Road.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test_Simulator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TrafficLights.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/City.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

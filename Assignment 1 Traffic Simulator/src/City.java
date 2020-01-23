@@ -28,3 +28,7 @@ public class City extends JPanel {
 
     }
 
+    /**Set the traffic lights**/
+    public void setSignal(int i,boolean r,boolean y,boolean g) {
+        trafficLights.get(i).setSignal(r, y, g); //set the traffic lights
+    }
