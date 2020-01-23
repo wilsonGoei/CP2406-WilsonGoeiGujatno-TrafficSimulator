@@ -317,3 +317,18 @@ public class Traffic extends JFrame implements Runnable,ActionListener {
 
     }
 
+    /**Check the vehicles**/
+    public void check() {
+        for(int j=0;j<total;j++) {
+
+            if(vehicles[j].check==true) {
+                for(int k=j;k<total;k++) {
+                    vehicles[k]= vehicles[k+1];
+                }
+                total--;
+
+            }
+
+        }
+    }
+
