@@ -45,3 +45,134 @@ public class CreateCity extends JPanel {
         trafficLights.get(i).setSignal(r, y, g);
     }
 
+    /**Control the Display**/
+    public void paint(Graphics graphics) {
+
+        super.paintComponent(graphics);
+
+        if(roads<=2) {
+
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(0, 100, 870, 50); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getWidth();b+=40) {
+                    graphics.fillRect(b, 120, 30, 5); // customize the position and size of the stripes
+                }
+            }
+        }
+
+//R2 and R3
+        else if(roads<=4) {
+
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(0, 100, 870, 50); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getWidth();b+=40) {
+                    graphics.fillRect(b, 120, 30, 5); // customize the position and size of the stripes
+                }
+            }
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(350, 0, 50, 600); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getHeight();b+=40) {
+                    graphics.fillRect(375, b, 5, 30); // customize the position and size of the stripes
+                }
+            }}
+
+
+        else if(roads<=6) {
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(0, 100, 870, 50); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getWidth();b+=40) {
+                    graphics.fillRect(b, 120, 30, 5); // customize the position and size of the stripes
+                }
+            }
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(350, 0, 50, 600); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getHeight();b+=40) {
+                    graphics.fillRect(375, b, 5, 30); // customize the position and size of the stripes
+                }
+            }
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(0, 400, 870, 50); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getWidth();b+=40) {
+                    graphics.fillRect(b, 420, 30, 5); // customize the position and size of the stripes
+                }
+            }
+        }
+
+        else if(roads<=10) {
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(0, 100, 870, 50); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getWidth();b+=40) {
+                    graphics.fillRect(b, 120, 30, 5); // customize the position and size of the stripes
+                }
+            }
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(350, 0, 50, 600); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getHeight();b+=40) {
+                    graphics.fillRect(375, b, 5, 30); // customize the position and size of the stripes
+                }
+            }
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(0, 400, 870, 50); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=0;b<getWidth();b+=40) {
+                    graphics.fillRect(b, 420, 30, 5); // customize the position and size of the stripes
+                }
+            }
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(150, 400, 50, 600); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=430;b<getHeight();b+=40) {
+                    graphics.fillRect(173, b, 5, 30); // customize the position and size of the stripes
+                }
+            }
+
+
+
+            graphics.setColor(darkPink); // set the color of the roads
+            graphics.fillRect(650, 400, 50, 600); // customize the position and size of the road
+
+            graphics.setColor(Color.WHITE); // set the color of the stripes
+            for(int a = roadHeight; a< roadHeight *4; a=a+ roadHeight) {
+                for(int b=430;b<getHeight();b+=40) {
+                    graphics.fillRect(673, b, 5, 30); // customize the position and size of the stripes
+                }
+            }}
+
+
+        for(int a = 0; a< trafficLights.size(); a++) {
+            trafficLights.get(a).paintMe(graphics); // display the traffic lights
+        }
+
+        for(int a = 0; a< vehicles.size(); a++) {
+            vehicles.get(a).paintMe(graphics); // display the vehicles
+        }
+    }
+
